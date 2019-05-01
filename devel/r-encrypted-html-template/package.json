@@ -1,0 +1,25 @@
+{
+	"name": "r-encrypted-html-template",
+	"version": "1.0.0",
+	"description": "Just an internal package",
+	"main": "index.js",
+	"author": "",
+	"dependencies": {
+		"sodium-encryption": "^1.2.3"
+	},
+	"private": true,
+	"devDependencies": {
+		"@babel/core": "^7.1.6",
+		"@babel/preset-env": "^7.1.6",
+		"babelify": "^10.0.0",
+		"browserify": "^16.2.2",
+		"browserify-licenses": "^1.4.6",
+		"uglify-es": "^3.3.10",
+		"uglifyify": "^5.0.1"
+	},
+	"scripts": {
+		"build-js": "browserify -g [ babelify --presets [@babel/preset-env] ] -g uglifyify decrypt.js | uglifyjs > decrypt_export.js && mv decrypt_export.js ../../devel/html-template.js",
+		"extract-licenses": "brlicenses decrypt.js --format=full --output=JSLICENSES.txt && mv JSLICENSES.txt ../../devel/JSLICENSES.txt",
+		"build": "npm run build-js && npm run extract-licenses"
+	}
+}

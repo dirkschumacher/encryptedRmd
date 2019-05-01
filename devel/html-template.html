@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>Encrypted Report</title>
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <style>
+body {
+ margin: 0 auto; padding: 0 1em; max-width: 28em;
+ font-size: 110%; font-family: "Helvetica Neue", sans-serif;
+}
+p { color: #333; line-height: 1.3; }
+a { color: #2980b9; text-decoration: none; }
+
+input, button {
+ display: block; margin: 1em 0; box-sizing: border-box; width: 100%;
+ font-size: 100%;
+}
+input.error{ border-color: #c0392b; }
+button {
+ padding: .4em;
+ border: none; border-radius: .2em;
+ color: white; background-color: #2980b9;
+ cursor: pointer;
+}
+button:active { background-color: #1970a9; }
+button.error { background-color: #c0392b; }
+
+.hidden { display: none; }
+ </style>
+</head>
+<body>
+ <p>This file contains an encrypted report.</p>
+ <input type="password" id="key" placeholder="Enter the key."/>
+ <button id="submit">decrypt the report</button>
+ <p id="message"></p>
+ <script id="nonce" type="text/plain">{{nonce}}</script>
+ <script id="encrypted" type="text/plain">{{encrypted}}</script>
+ <script>{{js}}</script>
+</body>
+</html>
