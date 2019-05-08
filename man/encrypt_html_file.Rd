@@ -19,6 +19,9 @@ encrypt_html_file(path, output_path = paste0(path, ".enc.html"),
 
 \item{write_key_file}{optional, write a key file in the same directory}
 }
+\value{
+The key used to encrypt the file in hex encoding as an invisible character vector.
+}
 \description{
 Encrypt an html file
 }

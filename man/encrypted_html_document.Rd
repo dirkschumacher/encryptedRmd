@@ -2,7 +2,7 @@
 % Please edit documentation in R/encrypted_html_document.R
 \name{encrypted_html_document}
 \alias{encrypted_html_document}
-\title{Convert to an encrypted HTML document}
+\title{Create an encrypted HTML document}
 \usage{
 encrypted_html_document(...)
 }
@@ -12,4 +12,13 @@ encrypted_html_document(...)
 \description{
 In addition to a standard html file the function also creates an encrypted version
 together with the key as two separate files.
+}
+\details{
+Two files are created:
+\describe{
+ \item{filename.enc.html}{This is the password protected file.}
+ \item{filename.enc.html.key}{This file contains the key with which the report was encrypted.}
+}
+
+Please only share the key file with trusted communication partners.
 }

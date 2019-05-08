@@ -6,6 +6,8 @@
 #' @param message_key optional, print the encryption key to the console
 #' @param write_key_file optional, write a key file in the same directory
 #'
+#' @return
+#' The key used to encrypt the file in hex encoding as an invisible character vector.
 #' @export
 encrypt_html_file <- function(path,
                               output_path = paste0(path, ".enc.html"),
@@ -45,10 +47,18 @@ read_pkg_file <- function(path) {
 }
 
 
-#' Convert to an encrypted HTML document
+#' Create an encrypted HTML document
 #'
 #' In addition to a standard html file the function also creates an encrypted version
 #' together with the key as two separate files.
+#'
+#' Two files are created:
+#' \describe{
+#'  \item{filename.enc.html}{This is the password protected file.}
+#'  \item{filename.enc.html.key}{This file contains the key with which the report was encrypted.}
+#' }
+#'
+#' Please only share the key file with trusted communication partners.
 #'
 #' @param ... all parameters are passed to rmarkdown::html_document
 #'

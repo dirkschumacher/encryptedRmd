@@ -3,12 +3,13 @@
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 
-# encryptedRmd
+# Password protected html markdown documents
 
 Self-encrypt html markdown reports using sodium. The goal is to provide
-functionality to encrypt markdown html documents and share them with
-others securely. The code needed to decrypt the file is bundled into the
-exported html file.
+functionality to password protect markdown html documents and share them
+with others securely. The code needed to decrypt the file is bundled
+into the exported html file, which makes the resulting file fully self
+contained.
 
 \*\* EXPERIMENTAL \*\*
 
@@ -25,7 +26,7 @@ remotes::install_github("dirkschumacher/encryptedRmd")
 ``` r
 library(encryptedRmd)
 encrypt_html_file("devel/example/test.html", output_path = "docs/test.encrypted.html")
-#> The key to your file is: 0268989a8721953c4fbb4536ba249cea06d0b7ca289d8b439c4421f89965bbb9
+#> The key to your file is: ada31d24f01015d9a02718a98169a547e5f3369346d02c66d4f9ccb60d305527
 #> Your file has been encrypted and saved at docs/test.encrypted.html
 ```
 
@@ -42,7 +43,7 @@ output: encryptedRmd::encrypted_html_document
 ---
 ```
 
-See [here](devel/example/) for an example. After knitting the document
+See [here](devel/example/) for an example. After knitting, the document
 is encrypted with a random key and the file is stored in the same
 directory together with the key.
 
@@ -50,3 +51,17 @@ directory together with the key.
 
 Inspired and based on the work by @derhuerst on [self encrypting html
 pages](https://github.com/derhuerst/self-decrypting-html-page).
+
+## Development
+
+In `devel/r-encrypted-html-template` the code to generate the javascript
+file is contained. In order to update the template, you have to run the
+following:
+
+  - In `devel/r-encrypted-html-template` run `npm run build`. This
+    creates a new version of the template and copies it to
+    `devel/html-template.js`. It also creates a file called
+    `JSLICENSES.txt` that contains all licenses of used node packages.
+  - In `devel` run `combine.R`. This generates the file report template
+    and copies it to `inst/html-template.html`. This template is then
+    used within the R package to generate encrypted html files.
