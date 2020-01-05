@@ -6,7 +6,9 @@
 \usage{
 encrypt_html_file(path, output_path = paste0(path, ".enc.html"),
   key = sodium::random(32L), message_key = TRUE,
-  write_key_file = FALSE)
+  write_key_file = FALSE,
+  output_template_path = system.file("html-template.html", package =
+  "encryptedRmd"))
 }
 \arguments{
 \item{path}{the file you want to encrypt}
@@ -18,6 +20,8 @@ encrypt_html_file(path, output_path = paste0(path, ".enc.html"),
 \item{message_key}{optional, print the encryption key to the console}
 
 \item{write_key_file}{optional, write a key file in the same directory}
+
+\item{output_template_path}{a path to the output template. The output template needs have the same html form elements (same ids) and the same placeholders as the default template. Everything else can be customized.}
 }
 \value{
 The key used to encrypt the file in hex encoding as an invisible character vector.

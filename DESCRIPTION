@@ -11,7 +11,7 @@ Description: Create encrypted html files that are fully self contained and do
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
 Imports: 
     sodium,
     readr,

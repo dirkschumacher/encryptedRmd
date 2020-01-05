@@ -8,14 +8,14 @@
   },
   "private": true,
   "devDependencies": {
-    "@babel/core": "^7.1.6",
-    "@babel/preset-env": "^7.1.6",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
     "babelify": "^10.0.0",
-    "browserify": "^16.2.2",
+    "browserify": "^16.5.0",
     "browserify-licenses": "^1.4.6",
+    "extend": ">=2.0.2",
     "uglify-es": "^3.3.10",
-    "uglifyify": "^5.0.1",
-    "extend": ">=2.0.2"
+    "uglifyify": "^5.0.2"
   },
   "scripts": {
     "build-js": "browserify -g [ babelify --presets [@babel/preset-env] ] -g uglifyify decrypt.js | uglifyjs > decrypt_export.js && mv decrypt_export.js ../../devel/html-template.js",

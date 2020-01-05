@@ -5,6 +5,7 @@
 #' @param key optional, the encryption key
 #' @param message_key optional, print the encryption key to the console
 #' @param write_key_file optional, write a key file in the same directory
+#' @param output_template_path a path to the output template. The output template needs have the same html form elements (same ids) and the same placeholders as the default template. Everything else can be customized.
 #'
 #' @return
 #' The key used to encrypt the file in hex encoding as an invisible character vector.
@@ -13,14 +14,17 @@ encrypt_html_file <- function(path,
                               output_path = paste0(path, ".enc.html"),
                               key = sodium::random(32L),
                               message_key = TRUE,
-                              write_key_file = FALSE) {
+                              write_key_file = FALSE,
+                              output_template_path = system.file("html-template.html", package = "encryptedRmd")) {
   stopifnot(file.exists(path), is.raw(key), length(key) >= 32L)
   content <- charToRaw(readr::read_file(path))
   nonce <- sodium::random(24L)
   encrypted_content <- sodium::data_encrypt(content, key, nonce)
-  tpl <- read_pkg_file("html-template.html")
+  tpl <- readr::read_file(output_template_path)
+  js <- read_pkg_file("html-template.js")
   tpl <- inject_raw_data(tpl, "encrypted", encrypted_content)
   tpl <- inject_raw_data(tpl, "nonce", nonce)
+  tpl <- inject_raw_data(tpl, "js", js, to_hex = FALSE)
   readr::write_file(tpl, output_path)
   hex_key <- sodium::bin2hex(key)
   if (message_key) {
@@ -33,11 +37,11 @@ encrypt_html_file <- function(path,
   invisible(hex_key)
 }
 
-inject_raw_data <- function(template, key, content) {
+inject_raw_data <- function(template, key, content, to_hex = TRUE) {
   gsub(
     x = template,
     pattern = paste0("{{", key, "}}"),
-    replacement = sodium::bin2hex(content),
+    replacement = if (to_hex) sodium::bin2hex(content) else content,
     fixed = TRUE
   )
 }
