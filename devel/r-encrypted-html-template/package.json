@@ -13,12 +13,11 @@
     "babelify": "^10.0.0",
     "browserify": "^16.5.0",
     "browserify-licenses": "^1.4.6",
-    "extend": ">=2.0.2",
-    "uglify-es": "^3.3.10",
+    "extend": ">=3.0.2",
     "uglifyify": "^5.0.2"
   },
   "scripts": {
-    "build-js": "browserify -g [ babelify --presets [@babel/preset-env] ] -g uglifyify decrypt.js | uglifyjs > decrypt_export.js && mv decrypt_export.js ../../devel/html-template.js",
+    "build-js": "browserify -g [ babelify --presets [@babel/preset-env] ] -g uglifyify decrypt.js > decrypt_export.js && mv decrypt_export.js ../../devel/html-template.js",
     "extract-licenses": "brlicenses decrypt.js --format=full --output=JSLICENSES.txt && mv JSLICENSES.txt ../../devel/JSLICENSES.txt",
     "build": "npm run build-js && npm run extract-licenses"
   }
