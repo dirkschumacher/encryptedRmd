@@ -24,3 +24,7 @@ js <- paste0(js_licenses, "\n", js, collapse = "\n")
 
 fs::file_copy("devel/html-template.html", "inst/html-template.html", overwrite = TRUE)
 readr::write_file(js, "inst/html-template.js")
+
+license <- readr::read_file("devel/LICENSE_template.txt")
+license <- gsub("{{js_licenses}}", replacement = js_licenses, x = license, fixed = TRUE)
+readr::write_file(license, "LICENSE")
