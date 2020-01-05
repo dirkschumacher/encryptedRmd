@@ -1,11 +1,20 @@
 Package: encryptedRmd
 Title: Encrypt html markdown reports using libsodium
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "Dirk",
-           family = "Schumacher",
-           role = c("aut", "cre"),
-           email = "mail@dirk-schumacher.net")
+Authors@R: c(
+    person(
+      given = "Dirk",
+      family = "Schumacher",
+      role = c("aut", "cre"),
+      email = "mail@dirk-schumacher.net"
+    ),
+    person(
+      given = "Jannis",
+      family = "R",
+      role = c("ctb"),
+      email = "mail@jannisr.de"
+    )
+  )
 Description: Create encrypted html files that are fully self contained and do
   not require any additional software. Password-protect your reports.
 License: MIT + file LICENSE
