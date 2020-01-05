@@ -1,4 +1,3 @@
-tpl <- readr::read_file("devel/html-template.html")
 js <- readr::read_file("devel/html-template.js")
 
 # prepend licenses
@@ -23,5 +22,5 @@ js_licenses <- paste0(paste0("// ", strsplit(js_licenses, split = "\n", fixed = 
 
 js <- paste0(js_licenses, "\n", js, collapse = "\n")
 
-tpl <- gsub(pattern = "{{js}}", replacement = js, x = tpl, fixed = TRUE)
-readr::write_file(tpl, "inst/html-template.html")
+fs::file_copy("devel/html-template.html", "inst/html-template.html", overwrite = TRUE)
+readr::write_file(js, "inst/html-template.js")
