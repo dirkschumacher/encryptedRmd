@@ -3,6 +3,4 @@ COPYRIGHT HOLDER: Dirk Schumacher
 
 ----
 
-The package contains html and javascript code with the following licenses
-
 {{js_licenses}}

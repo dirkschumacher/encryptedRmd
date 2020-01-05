@@ -18,7 +18,8 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 js_licenses
 )
 
-js_licenses <- paste0(paste0("// ", strsplit(js_licenses, split = "\n", fixed = TRUE)[[1]]), collapse = "\n")
+unescapted_licenses <- strsplit(js_licenses, split = "\n", fixed = TRUE)[[1]]
+js_licenses <- paste0(paste0("// ", unescapted_licenses), collapse = "\n")
 
 js <- paste0(js_licenses, "\n", js, collapse = "\n")
 
@@ -26,5 +27,5 @@ fs::file_copy("devel/html-template.html", "inst/html-template.html", overwrite =
 readr::write_file(js, "inst/html-template.js")
 
 license <- readr::read_file("devel/LICENSE_template.txt")
-license <- gsub("{{js_licenses}}", replacement = js_licenses, x = license, fixed = TRUE)
+license <- gsub("{{js_licenses}}", replacement = paste0(unescapted_licenses, collapse = "\n"), x = license, fixed = TRUE)
 readr::write_file(license, "LICENSE")
