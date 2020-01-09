@@ -3,6 +3,8 @@
 language: R
 cache: packages
 dist: xenial
+latex: false
+fortran: false
 
 addons:
   apt:
