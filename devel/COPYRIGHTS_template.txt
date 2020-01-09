@@ -1,0 +1,3 @@
+In addition to the information in the DESCRIPTION file:
+
+{{js_licenses}}
