@@ -6,6 +6,10 @@
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis build
 status](https://travis-ci.org/dirkschumacher/encryptedRmd.svg?branch=master)](https://travis-ci.org/dirkschumacher/encryptedRmd)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/dirkschumacher/encryptedRmd?branch=master&svg=true)](https://ci.appveyor.com/project/dirkschumacher/encryptedRmd)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/encryptedRmd)](https://CRAN.R-project.org/package=encryptedRmd)
 <!-- badges: end -->
 
 # Password protected html markdown documents
@@ -31,7 +35,7 @@ remotes::install_github("dirkschumacher/encryptedRmd")
 ``` r
 library(encryptedRmd)
 encrypt_html_file("devel/example/test.html", output_path = "docs/test.encrypted.html")
-#> The key to your file is: 9b9e29c70bdefb41823bb3c2eec4018ea0b6cca789162652aaa27f37e8910438
+#> The key to your file is: 09c1936ece3fc42f72784f04e10dcef3be9d51b9c740137dcbf57fb3fcb93de5
 #> Your file has been encrypted and saved at docs/test.encrypted.html
 ```
 
@@ -56,6 +60,10 @@ directory together with the key.
 
 Inspired and based on the work by @derhuerst on [self encrypting html
 pages](https://github.com/derhuerst/self-decrypting-html-page).
+
+## License
+
+MIT
 
 ## Development
 
