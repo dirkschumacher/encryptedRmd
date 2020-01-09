@@ -1,14 +1,33 @@
 #' Encrypt an html file
 #'
+#' This function takes an html file, encrypts the complete file using \code{\link[sodium:data_encrypt]{sodium::data_encrypt}}
+#' and a given key. It then injects the encrypted content into an html template that
+#' contains the \code{sodium} decryption code compiled to javascript.
+#' The resulting file is fully self contained as it can decrypt itself.
+#' When the user enters the correct key, the DOM of the html files gets replaced with
+#' the initially encrypted html file.
+#'
 #' @param path the file you want to encrypt
 #' @param output_path optional, the output path
 #' @param key optional, the encryption key
 #' @param message_key optional, print the encryption key to the console
 #' @param write_key_file optional, write a key file in the same directory
-#' @param output_template_path a path to the output template. The output template needs have the same html form elements (same ids) and the same placeholders as the default template. Everything else can be customized.
+#' @param output_template_path a path to the output template.
+#' The output template needs have the same html form elements (same ids) and the same placeholders as the default template. Everything else can be customized.
+#'
+#' @details
+#' Warning: You are using this at your own risk. Make sure your encryption is is
+#' strong enough. For serious use cases, please also review the code of the functions.
+#' Any feedback is appreciated. This is an early package version.
 #'
 #' @return
-#' The key used to encrypt the file in hex encoding as an invisible character vector.
+#' The key used to encrypt the file as an invisible raw vector.
+#'
+#' @references
+#' The package follows the same approach as the node module \href{https://github.com/derhuerst/self-decrypting-html-page}{self-decrypting-html-page}.
+#' The decryption is code is based on a number of great node modules.
+#' All licenses are also bundled with each encrypted html file.
+#'
 #' @export
 encrypt_html_file <- function(path,
                               output_path = paste0(path, ".enc.html"),
@@ -34,7 +53,7 @@ encrypt_html_file <- function(path,
   if (write_key_file) {
     readr::write_file(paste0(output_path, ".key"), x = hex_key)
   }
-  invisible(hex_key)
+  invisible(key)
 }
 
 inject_raw_data <- function(template, key, content, to_hex = TRUE) {
@@ -50,11 +69,13 @@ read_pkg_file <- function(path) {
   readr::read_file(system.file(path, package = "encryptedRmd"))
 }
 
-
 #' Create an encrypted HTML document
 #'
 #' In addition to a standard html file the function also creates an encrypted version
 #' together with the key as two separate files.
+#'
+#' @seealso
+#' \code{\link{encrypted_html_file}} for more information on the encryption.
 #'
 #' Two files are created:
 #' \describe{
@@ -62,9 +83,14 @@ read_pkg_file <- function(path) {
 #'  \item{filename.enc.html.key}{This file contains the key with which the report was encrypted.}
 #' }
 #'
-#' Please only share the key file with trusted communication partners.
 #'
 #' @param ... all parameters are passed to rmarkdown::html_document
+#'
+#' @details
+#' Warning: You are using this at your own risk. Make sure your encryption is is
+#' strong enough. For serious use cases, please also review the code of the functions.
+#' Any feedback is appreciated. This is an early package version.
+#' Please only share the key file with trusted parties
 #'
 #' @export
 encrypted_html_document <- function(...) {
@@ -76,4 +102,3 @@ encrypted_html_document <- function(...) {
   }
   format
 }
-

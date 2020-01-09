@@ -13,13 +13,16 @@ knitr::opts_chunk$set(
 )
 ```
 
+<!-- badges: start -->
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Travis build status](https://travis-ci.org/dirkschumacher/encryptedRmd.svg?branch=master)](https://travis-ci.org/dirkschumacher/encryptedRmd)
+<!-- badges: end -->
 
 # Password protected html markdown documents
 
 Self-encrypt html markdown reports using sodium. The goal is to provide functionality to password protect markdown html documents and share them with others securely. The code needed to decrypt the file is bundled into the exported html file, which makes the resulting file fully self contained.
 
-** EXPERIMENTAL **
+*Use at your own risk. Feedback and bug reports very welcome!*
 
 ## Installation
 
@@ -52,6 +55,10 @@ See [here](devel/example/) for an example. After knitting, the document is encry
 ## Inspiration
 
 Inspired and based on the work by @derhuerst on [self encrypting html pages](https://github.com/derhuerst/self-decrypting-html-page).
+
+## License
+
+MIT
 
 ## Development
 
