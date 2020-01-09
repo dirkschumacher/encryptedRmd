@@ -2,3 +2,9 @@
 
 language: R
 cache: packages
+dist: xenial
+
+addons:
+  apt:
+    packages:
+      - libsodium-dev
