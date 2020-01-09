@@ -20,7 +20,7 @@ Any feedback is appreciated. This is an early package version.
 Please only share the key file with trusted parties
 }
 \seealso{
-\code{\link{encrypted_html_file}} for more information on the encryption.
+\code{\link{encrypt_html_file}} for more information on the encryption.
 
 Two files are created:
 \describe{

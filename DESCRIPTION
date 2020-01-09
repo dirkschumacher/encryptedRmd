@@ -28,3 +28,6 @@ Imports:
     rmarkdown
 Suggests: 
     testthat (>= 2.1.0)
+Collate:
+    'encrypt_html_file.R'
+    'encrypted_html_document.R'
