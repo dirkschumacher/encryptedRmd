@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 
 # Password protected html markdown documents
 
-Self-encrypt html markdown reports using sodium. The goal is to provide functionality to password protect markdown html documents and share them with others securely. The code needed to decrypt the file is bundled into the exported html file, which makes the resulting file fully self contained.
+Self-encrypt html markdown reports using [libsodium](https://download.libsodium.org/doc/). The package lets you password protect markdown html documents and share them with others securely. The code needed to decrypt the file is bundled into the exported html file, which makes the resulting file fully self contained.
 
 *Use at your own risk. Feedback and bug reports very welcome!*
 

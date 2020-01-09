@@ -14,11 +14,11 @@ status](https://www.r-pkg.org/badges/version/encryptedRmd)](https://CRAN.R-proje
 
 # Password protected html markdown documents
 
-Self-encrypt html markdown reports using sodium. The goal is to provide
-functionality to password protect markdown html documents and share them
-with others securely. The code needed to decrypt the file is bundled
-into the exported html file, which makes the resulting file fully self
-contained.
+Self-encrypt html markdown reports using
+[libsodium](https://download.libsodium.org/doc/). The package lets you
+password protect markdown html documents and share them with others
+securely. The code needed to decrypt the file is bundled into the
+exported html file, which makes the resulting file fully self contained.
 
 *Use at your own risk. Feedback and bug reports very welcome\!*
 
@@ -35,7 +35,7 @@ remotes::install_github("dirkschumacher/encryptedRmd")
 ``` r
 library(encryptedRmd)
 encrypt_html_file("devel/example/test.html", output_path = "docs/test.encrypted.html")
-#> The key to your file is: 09c1936ece3fc42f72784f04e10dcef3be9d51b9c740137dcbf57fb3fcb93de5
+#> The key to your file is: 0c0bbfae15c18151f965c4a2bcfef5a40982d638c4e83dac5779c65612568900
 #> Your file has been encrypted and saved at docs/test.encrypted.html
 ```
 
