@@ -1,4 +1,4 @@
-// The javascript and html code is based on a number of JS packages. The licenses are listed below:
+// The javascript and html code used for decryption is based on a number of JavaScript packages. The licenses are listed below:
 // 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // self-decrypting-html-page v1.0.1- License ISC

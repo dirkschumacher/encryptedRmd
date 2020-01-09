@@ -3,7 +3,7 @@ js <- readr::read_file("devel/html-template.js")
 # prepend licenses
 js_licenses <- readr::read_file("devel/JSLICENSES.txt")
 js_licenses <- paste0(
-"The javascript and html code is based on a number of JS packages. The licenses are listed below:\n",
+"The javascript and html code used for decryption is based on a number of JavaScript packages. The licenses are listed below:\n",
 '
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 self-decrypting-html-page v1.0.1- License ISC
@@ -26,6 +26,6 @@ js <- paste0(js_licenses, "\n", js, collapse = "\n")
 fs::file_copy("devel/html-template.html", "inst/html-template.html", overwrite = TRUE)
 readr::write_file(js, "inst/html-template.js")
 
-license <- readr::read_file("devel/LICENSE_template.txt")
+license <- readr::read_file("devel/COPYRIGHTS_template.txt")
 license <- gsub("{{js_licenses}}", replacement = paste0(unescapted_licenses, collapse = "\n"), x = license, fixed = TRUE)
-readr::write_file(license, "LICENSE")
+readr::write_file(license, "inst/COPYRIGHTS")
