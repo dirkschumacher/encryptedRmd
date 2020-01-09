@@ -10,4 +10,3 @@
 ^\.travis\.yml$
 ^appveyor\.yml$
 ^SECURITY\.md$
-^\.gitattributes$
