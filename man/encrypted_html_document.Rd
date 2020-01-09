@@ -14,11 +14,17 @@ In addition to a standard html file the function also creates an encrypted versi
 together with the key as two separate files.
 }
 \details{
+Warning: You are using this at your own risk. Make sure your encryption is is
+strong enough. For serious use cases, please also review the code of the functions.
+Any feedback is appreciated. This is an early package version.
+Please only share the key file with trusted parties
+}
+\seealso{
+\code{\link{encrypted_html_file}} for more information on the encryption.
+
 Two files are created:
 \describe{
  \item{filename.enc.html}{This is the password protected file.}
  \item{filename.enc.html.key}{This file contains the key with which the report was encrypted.}
 }
-
-Please only share the key file with trusted communication partners.
 }

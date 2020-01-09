@@ -1,7 +1,12 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+<!-- badges: start -->
+
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Travis build
+status](https://travis-ci.org/dirkschumacher/encryptedRmd.svg?branch=master)](https://travis-ci.org/dirkschumacher/encryptedRmd)
+<!-- badges: end -->
 
 # Password protected html markdown documents
 
@@ -11,7 +16,7 @@ with others securely. The code needed to decrypt the file is bundled
 into the exported html file, which makes the resulting file fully self
 contained.
 
-\*\* EXPERIMENTAL \*\*
+*Use at your own risk. Feedback and bug reports very welcome\!*
 
 ## Installation
 
@@ -26,7 +31,7 @@ remotes::install_github("dirkschumacher/encryptedRmd")
 ``` r
 library(encryptedRmd)
 encrypt_html_file("devel/example/test.html", output_path = "docs/test.encrypted.html")
-#> The key to your file is: 70ca2dbb8f44908bdd12fe20df4b4cce36fb44cc0b482d96cd9704312ee7cb3b
+#> The key to your file is: 9b9e29c70bdefb41823bb3c2eec4018ea0b6cca789162652aaa27f37e8910438
 #> Your file has been encrypted and saved at docs/test.encrypted.html
 ```
 

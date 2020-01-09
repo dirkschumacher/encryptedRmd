@@ -7,3 +7,4 @@
 ^inst/example\.R$
 ^encryptedRmd\.Rproj$
 ^\.Rproj\.user$
+^\.travis\.yml$
