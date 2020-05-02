@@ -17,7 +17,7 @@ Authors@R: c(
   )
 Description: Create encrypted html files that are fully self contained and do
   not require any additional software. Using the package you can encrypt
-  arbitrary html files and also directly create encrypted rmarkdown html reports.
+  arbitrary html files and also directly create encrypted 'rmarkdown' html reports.
 License: MIT + file LICENSE
 Copyright: file inst/COPYRIGHTS
 Encoding: UTF-8
