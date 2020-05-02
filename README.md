@@ -25,7 +25,7 @@ exported html file, which makes the resulting file fully self contained.
 ## Installation
 
 ``` r
-install.packages("dirkschumacher/encryptedRmd")
+install.packages("encryptedRmd")
 ```
 
 ``` r
@@ -39,7 +39,7 @@ remotes::install_github("dirkschumacher/encryptedRmd")
 ``` r
 library(encryptedRmd)
 encrypt_html_file("devel/example/test.html", output_path = "docs/test.encrypted.html")
-#> The key to your file is: 0856021be6d2d140b0a6d9fe74a7b83259d0860e662a7d5306cafd9c84d435b4
+#> The key to your file is: f0b186e0120a30fb31d9783811e7fd834edfa8bba7e26fadd163296525ea152a
 #> Your file has been encrypted and saved at docs/test.encrypted.html
 ```
 

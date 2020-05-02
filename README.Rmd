@@ -29,7 +29,7 @@ Self-encrypt html markdown reports using [libsodium](https://download.libsodium.
 ## Installation
 
 ``` r
-install.packages("dirkschumacher/encryptedRmd")
+install.packages("encryptedRmd")
 ```
 
 ``` r
