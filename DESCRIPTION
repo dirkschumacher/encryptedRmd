@@ -1,6 +1,6 @@
 Package: encryptedRmd
 Title: Encrypt Html Reports Using Libsodium
-Version: 0.0.0.9000
+Version: 0.2.0
 Authors@R: c(
     person(
       given = "Dirk",
