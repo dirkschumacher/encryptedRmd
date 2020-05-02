@@ -25,7 +25,7 @@
 #'
 #' @references
 #' The package follows the same approach as the node module \href{https://github.com/derhuerst/self-decrypting-html-page}{self-decrypting-html-page}.
-#' The decryption is code is based on a number of great node modules.
+#' The decryption code is based on a number of great node modules.
 #' All licenses are also bundled with each encrypted html file.
 #'
 #' @export
