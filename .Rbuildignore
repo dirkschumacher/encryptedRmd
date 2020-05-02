@@ -1,5 +1,5 @@
 ^LICENSE\.md$
-^README\.md$
+^README\.Rmd$
 ^devel$
 ^docs$
 ^inst/test
