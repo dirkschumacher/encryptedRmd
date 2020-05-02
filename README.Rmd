@@ -29,6 +29,10 @@ Self-encrypt html markdown reports using [libsodium](https://download.libsodium.
 ## Installation
 
 ``` r
+install.packages("dirkschumacher/encryptedRmd")
+```
+
+``` r
 remotes::install_github("dirkschumacher/encryptedRmd")
 ```
 
