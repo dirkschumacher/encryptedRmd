@@ -10,3 +10,4 @@
 ^appveyor\.yml$
 ^SECURITY\.md$
 ^cran-comments\.md$
+^CRAN-RELEASE$

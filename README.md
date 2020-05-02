@@ -39,7 +39,7 @@ remotes::install_github("dirkschumacher/encryptedRmd")
 ``` r
 library(encryptedRmd)
 encrypt_html_file("devel/example/test.html", output_path = "docs/test.encrypted.html")
-#> The key to your file is: f0b186e0120a30fb31d9783811e7fd834edfa8bba7e26fadd163296525ea152a
+#> The key to your file is: d0ac7b09a0e8b5ce337dace7d37abf7777c072e9c0da23e7d0ec993fd2d18766
 #> Your file has been encrypted and saved at docs/test.encrypted.html
 ```
 
@@ -56,9 +56,10 @@ output: encryptedRmd::encrypted_html_document
 ---
 ```
 
-See [here](devel/example/) for an example. After knitting, the document
-is encrypted with a random key and the file is stored in the same
-directory together with the key.
+See
+[here](https://github.com/dirkschumacher/encryptedRmd/tree/master/devel/example)
+for an example. After knitting, the document is encrypted with a random
+key and the file is stored in the same directory together with the key.
 
 ## Inspiration
 

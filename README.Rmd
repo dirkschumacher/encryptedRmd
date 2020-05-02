@@ -56,7 +56,7 @@ output: encryptedRmd::encrypted_html_document
 ---
 ```
 
-See [here](devel/example/) for an example. After knitting, the document is encrypted with a random key and the file is stored in the same directory together with the key.
+See [here](https://github.com/dirkschumacher/encryptedRmd/tree/master/devel/example) for an example. After knitting, the document is encrypted with a random key and the file is stored in the same directory together with the key.
 
 ## Inspiration
 
