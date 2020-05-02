@@ -8,10 +8,10 @@
   },
   "private": true,
   "devDependencies": {
-    "@babel/core": "^7.7.7",
-    "@babel/preset-env": "^7.7.7",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
     "babelify": "^10.0.0",
-    "browserify": "^16.5.0",
+    "browserify": "^16.5.1",
     "browserify-licenses": "^1.4.6",
     "extend": ">=3.0.2",
     "uglifyify": "^5.0.2"
