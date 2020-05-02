@@ -14,7 +14,7 @@ In addition to a standard html file the function also creates an encrypted versi
 together with the key as two separate files.
 }
 \details{
-Warning: You are using this at your own risk. Make sure your encryption is is
+Warning: You are using this at your own risk. Make sure your encryption key is
 strong enough. For serious use cases, please also review the code of the functions.
 Any feedback is appreciated. This is an early package version.
 Please only share the key file with trusted parties
