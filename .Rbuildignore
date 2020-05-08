@@ -1,6 +1,5 @@
 ^LICENSE\.md$
 ^README\.Rmd$
-^README\.md$
 ^devel$
 ^docs$
 ^inst/test
@@ -10,3 +9,5 @@
 ^\.travis\.yml$
 ^appveyor\.yml$
 ^SECURITY\.md$
+^cran-comments\.md$
+^CRAN-RELEASE$

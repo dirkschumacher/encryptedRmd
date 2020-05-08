@@ -39,12 +39,12 @@ When the user enters the correct key, the DOM of the html files gets replaced wi
 the initially encrypted html file.
 }
 \details{
-Warning: You are using this at your own risk. Make sure your encryption is is
+Warning: You are using this at your own risk. Make sure your encryption key is
 strong enough. For serious use cases, please also review the code of the functions.
 Any feedback is appreciated. This is an early package version.
 }
 \references{
 The package follows the same approach as the node module \href{https://github.com/derhuerst/self-decrypting-html-page}{self-decrypting-html-page}.
-The decryption is code is based on a number of great node modules.
+The decryption code is based on a number of great node modules.
 All licenses are also bundled with each encrypted html file.
 }

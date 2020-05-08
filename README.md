@@ -25,6 +25,10 @@ exported html file, which makes the resulting file fully self contained.
 ## Installation
 
 ``` r
+install.packages("encryptedRmd")
+```
+
+``` r
 remotes::install_github("dirkschumacher/encryptedRmd")
 ```
 
@@ -35,7 +39,7 @@ remotes::install_github("dirkschumacher/encryptedRmd")
 ``` r
 library(encryptedRmd)
 encrypt_html_file("devel/example/test.html", output_path = "docs/test.encrypted.html")
-#> The key to your file is: 0c0bbfae15c18151f965c4a2bcfef5a40982d638c4e83dac5779c65612568900
+#> The key to your file is: fe698693592710049a3de164f6dccddc4fe85dc2f5fecbf5fae24a80f486e978
 #> Your file has been encrypted and saved at docs/test.encrypted.html
 ```
 
@@ -43,7 +47,7 @@ You can take a look at the exported file
 [here](https://dirkschumacher.github.io/encryptedRmd/test.encrypted.html)
 and use the key printed above to decrypt it.
 
-### Encrypted rmarkdown html format
+### Encrypted `rmarkdown` html format
 
 ``` yml
 ---
@@ -52,9 +56,10 @@ output: encryptedRmd::encrypted_html_document
 ---
 ```
 
-See [here](devel/example/) for an example. After knitting, the document
-is encrypted with a random key and the file is stored in the same
-directory together with the key.
+See
+[here](https://github.com/dirkschumacher/encryptedRmd/tree/master/devel/example)
+for an example. After knitting, the document is encrypted with a random
+key and the file is stored in the same directory together with the key.
 
 ## Inspiration
 

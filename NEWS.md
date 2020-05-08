@@ -1,0 +1,5 @@
+# encryptedRmd (development version)
+
+# encryptedRmd 0.2.0
+
+* Initial release
