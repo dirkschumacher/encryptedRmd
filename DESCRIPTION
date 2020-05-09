@@ -5,13 +5,13 @@ Authors@R: c(
     person(
       given = "Dirk",
       family = "Schumacher",
-      role = c("aut", "cre"),
+      role = c("aut", "cre", "cph"),
       email = "mail@dirk-schumacher.net"
     ),
     person(
       given = "Jannis",
       family = "R.",
-      role = "aut",
+      role = c("aut", "cph"),
       email = "mail@jannisr.de"
     )
   )
