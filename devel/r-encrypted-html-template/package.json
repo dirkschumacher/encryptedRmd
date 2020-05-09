@@ -4,6 +4,7 @@
   "description": "Just an internal package",
   "author": "",
   "dependencies": {
+    "file-saver": "^2.0.2",
     "sodium-encryption": "^1.2.3"
   },
   "private": true,

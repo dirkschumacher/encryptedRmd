@@ -1,6 +1,6 @@
 # MIT License
 
-Copyright (c) 2019 Dirk Schumacher
+Copyright (c) 2020 Dirk Schumacher, Jannis R
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

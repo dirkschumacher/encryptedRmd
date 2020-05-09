@@ -39,7 +39,7 @@ remotes::install_github("dirkschumacher/encryptedRmd")
 ``` r
 library(encryptedRmd)
 encrypt_html_file("devel/example/test.html", output_path = "docs/test.encrypted.html")
-#> The key to your file is: fe698693592710049a3de164f6dccddc4fe85dc2f5fecbf5fae24a80f486e978
+#> The key to your file is: 037c838dc252ca04d4318d38dd7cfdedd78d5cb9c5af8fcdc1a646243a911bc9
 #> Your file has been encrypted and saved at docs/test.encrypted.html
 ```
 
