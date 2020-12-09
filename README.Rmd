@@ -15,9 +15,8 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Travis build status](https://travis-ci.org/dirkschumacher/encryptedRmd.svg?branch=master)](https://travis-ci.org/dirkschumacher/encryptedRmd)
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/dirkschumacher/encryptedRmd?branch=master&svg=true)](https://ci.appveyor.com/project/dirkschumacher/encryptedRmd)
 [![CRAN status](https://www.r-pkg.org/badges/version/encryptedRmd)](https://CRAN.R-project.org/package=encryptedRmd)
+[![R build status](https://github.com/dirkschumacher/encryptedRmd/workflows/R-CMD-check/badge.svg)](https://github.com/dirkschumacher/encryptedRmd/actions)
 <!-- badges: end -->
 
 # Password protected html markdown documents
