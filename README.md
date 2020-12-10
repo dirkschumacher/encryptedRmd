@@ -4,21 +4,19 @@
 <!-- badges: start -->
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Travis build
-status](https://travis-ci.org/dirkschumacher/encryptedRmd.svg?branch=master)](https://travis-ci.org/dirkschumacher/encryptedRmd)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/dirkschumacher/encryptedRmd?branch=master&svg=true)](https://ci.appveyor.com/project/dirkschumacher/encryptedRmd)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/encryptedRmd)](https://CRAN.R-project.org/package=encryptedRmd)
+[![R build
+status](https://github.com/dirkschumacher/encryptedRmd/workflows/R-CMD-check/badge.svg)](https://github.com/dirkschumacher/encryptedRmd/actions)
 <!-- badges: end -->
 
 # Password protected html markdown documents
 
 Self-encrypt html markdown reports using
-[libsodium](https://download.libsodium.org/doc/). The package lets you
-password protect markdown html documents and share them with others
-securely. The code needed to decrypt the file is bundled into the
-exported html file, which makes the resulting file fully self contained.
+[libsodium](https://doc.libsodium.org/). The package lets you password
+protect markdown html documents and share them with others securely. The
+code needed to decrypt the file is bundled into the exported html file,
+which makes the resulting file fully self contained.
 
 *Use at your own risk. Feedback and bug reports very welcome\!*
 
@@ -39,7 +37,7 @@ remotes::install_github("dirkschumacher/encryptedRmd")
 ``` r
 library(encryptedRmd)
 encrypt_html_file("devel/example/test.html", output_path = "docs/test.encrypted.html")
-#> The key to your file is: 037c838dc252ca04d4318d38dd7cfdedd78d5cb9c5af8fcdc1a646243a911bc9
+#> The key to your file is: f5c8c13752cf4e8cc59b59e9f96279ceb6836fc8ce957e55e232724dd80c318f
 #> Your file has been encrypted and saved at docs/test.encrypted.html
 ```
 
