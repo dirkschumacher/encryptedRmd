@@ -1,3 +1,5 @@
+# encryptedRmd (development version)
+
 # encryptedRmd 0.2.1
 
 * Decrypting a document now triggers a file-save in the browser. This fixes
