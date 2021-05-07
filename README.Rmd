@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 
 # Password protected html markdown documents
 
-Self-encrypt html markdown reports using [libsodium](https://doc.libsodium.org/). The package lets you password protect markdown html documents and share them with others securely. The code needed to decrypt the file is bundled into the exported html file, which makes the resulting file fully self contained.
+Self-decrypting html markdown reports using [libsodium](https://doc.libsodium.org/). The package lets you password protect markdown html documents and share them with others securely. The code needed to decrypt the file is bundled into the exported html file, which makes the resulting file fully self contained.
 
 *Use at your own risk. Feedback and bug reports very welcome!*
 
@@ -59,7 +59,7 @@ See [here](https://github.com/dirkschumacher/encryptedRmd/tree/master/devel/exam
 
 ## Inspiration
 
-Inspired and based on the work by @derhuerst on [self encrypting html pages](https://github.com/derhuerst/self-decrypting-html-page).
+Inspired and based on the work by @derhuerst on [self decrypting html pages](https://github.com/derhuerst/self-decrypting-html-page).
 
 ## License
 
