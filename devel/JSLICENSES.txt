@@ -1,5 +1,5 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-base64-js v1.3.1 - License MIT
+base64-js v1.5.1 - License MIT
 downloaded from <https://www.npmjs.com/package/base64-js>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The MIT License (MIT)
@@ -29,7 +29,7 @@ THE SOFTWARE.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-browser-resolve v1.11.3 - License MIT
+browser-resolve v2.0.0 - License MIT
 downloaded from <https://www.npmjs.com/package/browser-resolve>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The MIT License (MIT)
@@ -89,7 +89,7 @@ THE SOFTWARE.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-file-saver v2.0.2 - License MIT
+file-saver v2.0.5 - License MIT
 downloaded from <https://www.npmjs.com/package/file-saver>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The MIT License
@@ -109,7 +109,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-ieee754 v1.1.13 - License BSD-3-Clause
+ieee754 v1.2.1 - License BSD-3-Clause
 downloaded from <https://www.npmjs.com/package/ieee754>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Copyright 2008 Fair Oaks Labs, Inc.

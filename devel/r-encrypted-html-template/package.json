@@ -4,16 +4,16 @@
   "description": "Just an internal package",
   "author": "",
   "dependencies": {
-    "file-saver": "^2.0.2",
+    "file-saver": "^2.0.5",
     "sodium-encryption": "^1.2.3"
   },
   "private": true,
   "devDependencies": {
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
     "babelify": "^10.0.0",
-    "browserify": "^16.5.1",
-    "browserify-licenses": "^1.4.6",
+    "browserify": "^17.0.0",
+    "browserify-licenses": "^1.4.7-1",
     "extend": ">=3.0.2",
     "uglifyify": "^5.0.2"
   },
